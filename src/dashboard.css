@@ -32,28 +32,28 @@
 	font-size: 0.5em;
 }
 
-.wind {
+.stats {
 	font-size: 2rem;
 	text-align: center;
 	vertical-align: middle;
 }
 
-.wind table {
+.stats table {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.wind .label {
+.stats .label {
 	color: #808080;
 	text-align: left;
 	font-size: 1.5rem;
 }
 
-.wind .value {
+.stats .value {
 	text-align: right;
 }
 
-.wind .unit {
+.stats .unit {
 	color: #808080;
 	text-align: left;
 	vertical-align: middle;
