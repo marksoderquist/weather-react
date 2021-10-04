@@ -5,7 +5,7 @@ export default class Stats extends Component {
 
 	render() {
 		const windSpeed = parseFloat(this.props.weather.windTenMinAvg).toFixed(1);
-		const gustSpeed = parseFloat(this.props.weather.windTenMinMax).toFixed(1);
+		const gustSpeed = parseFloat(this.props.weather.windTwoMinMax).toFixed(1);
 		const windCardinal = windSpeed < 0.1 ? "---" : this.props.weather.windCardinalTenMinAvg;
 		const windDirection = windSpeed < 0.1 ? "---" : parseFloat(this.props.weather.windDirectionTenMinAvg).toFixed(0);
 		const rainTotalDaily = parseFloat(this.props.weather.rainTotalDaily).toFixed(2);
