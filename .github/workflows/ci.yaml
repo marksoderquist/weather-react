@@ -1,0 +1,49 @@
+name: CI
+
+on: [ push ]
+
+env:
+  MVS_GPG_PASSWORD: ${{ secrets.MVS_GPG_PASSWORD }}
+  MVS_REPO_USERNAME: ${{ secrets.MVS_REPO_USERNAME }}
+  WEBSITE_DEPLOY_PATH: '/opt/sod/dalton/client'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch sources
+        uses: actions/checkout@v1
+
+      - name: Fetch CI/CD resources
+        uses: actions/checkout@v2
+        with:
+          repository: marksoderquist/cicd
+          path: .github
+
+      - name: Configuration
+        shell: bash
+        run: |
+          source .github/config.sh
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Install
+        run: npm install
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        run: |
+          ssh -t ${{env.MVS_REPO_USERNAME}}@soderquist.net "mkdir -p ${{env.WEBSITE_DEPLOY_PATH}};" 2>&1
+          if [ $? -ne 0 ]; then exit 1; fi
+          scp -r -B build/* ${{env.MVS_REPO_USERNAME}}@soderquist.net:${{env.WEBSITE_DEPLOY_PATH}} 2>&1
+          if [ $? -ne 0 ]; then exit 1; fi
