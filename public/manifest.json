@@ -1,6 +1,7 @@
 {
   "short_name": "Bluewing Weather",
   "name": "Bluewing Weather",
+  "version": "3.2.1",
   "icons": [
     {
       "src": "favicon.png",
