@@ -9,10 +9,17 @@ export default class Stats extends Component {
 		const windCardinal = windSpeed < 0.1 ? "---" : this.props.weather.windCardinalTenMinAvg;
 		const windDirection = windSpeed < 0.1 ? "---" : parseFloat(this.props.weather.windDirectionTenMinAvg).toFixed(0);
 		const rainTotalDaily = parseFloat(this.props.weather.rainTotalDaily).toFixed(2);
+		const feelslike = parseFloat(this.props.weather.feelsLike).toFixed(1);
+		const tempUnit = this.props.weather.temperatureUnit;
 		return (
 			<div className="stats">
 				<table>
 					<tbody>
+					<tr className="stats">
+						<td className="label">feel </td>
+						<td className="value">{feelslike}</td>
+						<td className="unit">{tempUnit}</td>
+					</tr>
 					<tr>
 						<td className="label">wind&nbsp;</td>
 						<td className="value">&nbsp;{windSpeed}</td>
