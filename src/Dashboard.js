@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {weatherService} from "./Api";
+import {withIdleTimer} from "react-idle-timer";
 import WeatherStation from './WeatherStation'
 import Clock from './Clock';
 import FlightConditions from './FlightConditions';
 import './dashboard.css';
 
-export default class Dashboard extends Component {
+class IdleTimerDashboard extends Component {
 
 	state = {
 		weather: {
@@ -27,7 +28,15 @@ export default class Dashboard extends Component {
 
 	loadWeatherFromServer = () => {
 		weatherService.fetchWeather((weather) => this.setState({weather: weather}));
-	};
+	}
+
+	onIdle = () => {
+		console.log( "IDLE" )
+	}
+
+	onActive = (event) => {
+		console.log( "ACTIVE" )
+	}
 
 	render() {
 		return (
@@ -47,3 +56,6 @@ export default class Dashboard extends Component {
 		)
 	}
 }
+
+const Dashboard = withIdleTimer(IdleTimerDashboard)
+export default Dashboard
