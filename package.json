@@ -9,7 +9,11 @@
     "react-idle-timer": "^5.4.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^13",
     "fetch-mock": "^6.5.2",
+    "node-fetch": "^2.6.7",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
