@@ -30,12 +30,12 @@ class IdleTimerDashboard extends Component {
 		weatherService.fetchWeather((weather) => this.setState({weather: weather}));
 	}
 
-	onIdle = () => {
-		console.log( "IDLE" )
+	onIdle() {
+		document.body.style.cursor="none"
 	}
 
-	onActive = (event) => {
-		console.log( "ACTIVE" )
+	onActive() {
+		document.body.style.cursor="default"
 	}
 
 	render() {

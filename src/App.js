@@ -6,9 +6,9 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div className="app">
+			<div id='app' className="app">
 				<Dashboard
-					timeout={1000 * 60 * 1}
+					timeout={1000}
 					startOnMount
 				/>
 			</div>
