@@ -31,11 +31,13 @@ class IdleTimerDashboard extends Component {
 	}
 
 	onIdle() {
-		document.body.style.cursor="none"
+		console.log( "IDLE" )
+		document.getElementsByTagName('html').item(0).style.cursor="none"
 	}
 
 	onActive() {
-		document.body.style.cursor="default"
+		console.log( "ACTIVE" )
+		document.getElementsByTagName('html').item(0).style.cursor="default"
 	}
 
 	render() {
