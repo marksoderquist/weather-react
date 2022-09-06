@@ -16,15 +16,15 @@ export default class Stats extends Component {
 			<div className="stats">
 				<table>
 					<tbody>
-					<tr>
-						<td className="label">humid&nbsp;</td>
-						<td className="value">&nbsp;{humidity}</td>
-						<td className="unit">&nbsp;{this.props.weather.humidityUnit}</td>
-					</tr>
 					<tr className="stats">
 						<td className="label">feel </td>
 						<td className="value">{feelslike}</td>
 						<td className="unit">{tempUnit}</td>
+					</tr>
+					<tr>
+						<td className="label">humid&nbsp;</td>
+						<td className="value">&nbsp;{humidity}</td>
+						<td className="unit">&nbsp;{this.props.weather.humidityUnit}</td>
 					</tr>
 					<tr>
 						<td className="label">wind&nbsp;</td>
