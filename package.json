@@ -6,7 +6,7 @@
   "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-idle-timer": "^5.4.0"
+    "react-idle-timer": "^5.4.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5",
