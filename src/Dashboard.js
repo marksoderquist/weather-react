@@ -13,16 +13,20 @@ class IdleTimerDashboard extends Component {
 			temperature: '',
 			temperatureUnit: ''
 		}
-	};
+	}
 
-	componentDidMount() {
+	constructor(props){
+		super(props);
+	}
+
+	componentDidMount = () => {
 		// The initial load
 		setTimeout(this.loadWeatherFromServer, 0);
 		// The remaining loads
 		this.refreshTimer = setInterval(this.loadWeatherFromServer, 5000);
 	}
 
-	componentWillUnmount() {
+	componentWillUnmount = () => {
 		clearInterval(this.refreshTimer);
 	}
 
@@ -31,13 +35,13 @@ class IdleTimerDashboard extends Component {
 	}
 
 	onIdle() {
-		console.log( "IDLE" )
-		document.getElementsByTagName('html').item(0).style.cursor="none"
+		console.log("IDLE")
+		document.getElementsByTagName('html').item(0).style.cursor = "none"
 	}
 
 	onActive() {
-		console.log( "ACTIVE" )
-		document.getElementsByTagName('html').item(0).style.cursor="default"
+		console.log("ACTIVE")
+		document.getElementsByTagName('html').item(0).style.cursor = "default"
 	}
 
 	render() {

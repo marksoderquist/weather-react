@@ -19,7 +19,7 @@
       "sizes": "256x256"
     }
   ],
-  "start_url": "http://mark.soderquist.net/weather/index.html",
+  "start_url": "/weather/index.html",
   "scope": "/weather/",
   "display": "standalone",
   "theme_color": "#000000",
