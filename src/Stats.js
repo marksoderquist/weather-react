@@ -8,6 +8,7 @@ export default class Stats extends Component {
 		const gustSpeed = parseFloat(this.props.weather.windTwoMinMax).toFixed(1);
 		const windCardinal = windSpeed < 0.1 ? "---" : this.props.weather.windCardinalTenMinAvg;
 		const windDirection = windSpeed < 0.1 ? "---" : parseFloat(this.props.weather.windDirectionTenMinAvg).toFixed(0);
+		const humidity = parseFloat(this.props.weather.humidity).toFixed(0);
 		const rainTotalDaily = parseFloat(this.props.weather.rainTotalDaily).toFixed(2);
 		const feelslike = parseFloat(this.props.weather.feelsLike).toFixed(1);
 		const tempUnit = this.props.weather.temperatureUnit;
@@ -19,6 +20,11 @@ export default class Stats extends Component {
 						<td className="label">feel </td>
 						<td className="value">{feelslike}</td>
 						<td className="unit">{tempUnit}</td>
+					</tr>
+					<tr>
+						<td className="label">humid&nbsp;</td>
+						<td className="value">&nbsp;{humidity}</td>
+						<td className="unit">&nbsp;{this.props.weather.humidityUnit}</td>
 					</tr>
 					<tr>
 						<td className="label">wind&nbsp;</td>

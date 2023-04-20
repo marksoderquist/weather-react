@@ -1,19 +1,19 @@
 {
   "name": "weather",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "private": true,
   "homepage": "/weather",
   "dependencies": {
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-idle-timer": "^5.4.0"
+    "react-idle-timer": "^5.6.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5",
     "@testing-library/react": "^12.1.5",
-    "@testing-library/user-event": "^13",
-    "fetch-mock": "^6.5.2",
-    "node-fetch": "^2.6.7",
+    "@testing-library/user-event": "^14",
+    "fetch-mock": "^9.11.0",
+    "node-fetch": "^2.6.9",
     "react-scripts": "^5.0.1"
   },
   "scripts": {
