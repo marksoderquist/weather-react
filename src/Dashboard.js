@@ -11,7 +11,9 @@ class IdleTimerDashboard extends Component {
 	state = {
 		weather: {
 			temperature: '',
-			temperatureUnit: ''
+			temperatureUnit: '',
+			temperatureMetric: '',
+			temperatureUnitMetric: ''
 		}
 	}
 
