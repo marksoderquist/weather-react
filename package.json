@@ -15,7 +15,7 @@
     "fetch-mock": "^11.1.0",
     "node-fetch": "^2.6.9",
     "react-scripts": "^5.0.1",
-    "postcss": "^8.4.40"
+    "postcss": "^8.4.41"
   },
   "scripts": {
     "start": "react-scripts start",
