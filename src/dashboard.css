@@ -95,6 +95,11 @@
 	font-weight: bold;
 }
 
+.flight-conditions .subtitle {
+	background-color: #333;
+	color: #888;
+}
+
 .flight-conditions .summary {
 	font-size: 4rem;
 }
