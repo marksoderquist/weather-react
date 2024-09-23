@@ -9,6 +9,7 @@ import './dashboard.css';
 class IdleTimerDashboard extends Component {
 
 	state = {
+		unitSystem: '',
 		weather: {
 			temperature: '',
 			temperatureUnit: '',
@@ -19,6 +20,7 @@ class IdleTimerDashboard extends Component {
 
 	constructor(props){
 		super(props);
+		this.state.unitSystem = props.unitSystem || '';
 	}
 
 	componentDidMount = () => {
@@ -33,7 +35,7 @@ class IdleTimerDashboard extends Component {
 	}
 
 	loadWeatherFromServer = () => {
-		weatherService.fetchWeather((weather) => this.setState({weather: weather}));
+		weatherService.fetchWeather(this.state.unitSystem, (weather) => this.setState({weather: weather}));
 	}
 
 	onIdle() {

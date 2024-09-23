@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 import './dashboard.css';
-import {toDatestamp} from "./util";
-import TemperatureGauge from "./TemperatureGauge";
-import Stats from "./Stats";
 
 export default class FlightConditions extends Component {
 
@@ -18,13 +15,6 @@ export default class FlightConditions extends Component {
 						<span key={index}>{index > 0 ? ' ' : ''}{reason}</span>
 					))}
 				</div>
-
-				<div>&nbsp;</div>
-				<div className='title'>{this.props.weather.name} Station</div>
-				<div className='subtitle'>{toDatestamp(this.props.weather.timestamp)}</div>
-				<TemperatureGauge weather={this.props.weather}/>
-				<Stats weather={this.props.weather}/>
-
 			</div>
 		);
 	}
