@@ -61,17 +61,15 @@ class IdleTimerDashboard extends Component {
 			<div className="dashboard">
 				<div className="content-left col-4">
 					<div className="buffer"/>
-					<FlightConditions weather={this.state.stationA.weather}/>
-					&nbsp;
 					<WeatherStation weather={this.state.stationA.weather}/>
 				</div>
 				<div className="content-center col-4">
 					<Clock/>
+					&nbsp;
+					<FlightConditions weather={this.state.stationA.weather}/>
 				</div>
 				<div className="content-right col-4">
 					<div className="buffer"/>
-					<FlightConditions weather={this.state.stationB.weather}/>
-					&nbsp;
 					<WeatherStation weather={this.state.stationB.weather}/>
 				</div>
 			</div>
