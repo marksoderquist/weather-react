@@ -59,6 +59,11 @@ class IdleTimerDashboard extends Component {
 	render() {
 		return (
 			<div className="dashboard">
+				<div className="mobile-header">
+					<FlightConditions weather={this.state.stationA.weather}/>
+					&nbsp;
+				</div>
+
 				<div className="content-left col-4">
 					<div className="buffer"/>
 					<WeatherStation weather={this.state.stationA.weather}/>
