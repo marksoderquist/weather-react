@@ -10,24 +10,17 @@ class IdleTimerDashboard extends Component {
 
 	state = {
 		stationA: {
-			unitSystem: '',
-			weather: {
-				temperature: '',
-				temperatureUnit: ''
-			}
+			temperature: '',
+			temperatureUnit: ''
 		},
 		stationB: {
-			unitSystem: '',
-			weather: {
-				temperature: '',
-				temperatureUnit: ''
-			}
+			temperature: '',
+			temperatureUnit: ''
 		}
 	}
 
-	constructor(props){
+	constructor(props) {
 		super(props);
-		this.state.unitSystem = props.unitSystem || '';
 	}
 
 	componentDidMount = () => {
@@ -42,8 +35,8 @@ class IdleTimerDashboard extends Component {
 	}
 
 	loadWeatherFromServer = () => {
-		weatherService.fetchWeather('metric', (weather) => this.setState({stationA:{weather: weather}}));
-		weatherService.fetchWeather('imperial', (weather) => this.setState({stationB:{weather: weather}}));
+		weatherService.fetchWeather('metric', (weather) => this.setState({stationA:  weather}));
+		weatherService.fetchWeather('imperial', (weather) => this.setState({stationB: weather}));
 	}
 
 	onIdle() {
@@ -60,22 +53,22 @@ class IdleTimerDashboard extends Component {
 		return (
 			<div className="dashboard">
 				<div className="mobile-header">
-					<FlightConditions weather={this.state.stationA.weather}/>
+					<FlightConditions station={this.state.stationA}/>
 					&nbsp;
 				</div>
 
 				<div className="content-left col-4">
 					<div className="buffer"/>
-					<WeatherStation weather={this.state.stationA.weather}/>
+					<WeatherStation station={this.state.stationA}/>
 				</div>
 				<div className="content-center col-4">
 					<Clock/>
 					&nbsp;
-					<FlightConditions weather={this.state.stationA.weather}/>
+					<FlightConditions station={this.state.stationA}/>
 				</div>
 				<div className="content-right col-4">
 					<div className="buffer"/>
-					<WeatherStation weather={this.state.stationB.weather}/>
+					<WeatherStation station={this.state.stationB}/>
 				</div>
 			</div>
 		)

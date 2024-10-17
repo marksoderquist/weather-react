@@ -4,8 +4,9 @@ import './dashboard.css';
 export default class FlightConditions extends Component {
 
 	render() {
-		let summary = (this.props.weather.flightCondition && this.props.weather.flightCondition.summary) || '';
-		let reasons = (this.props.weather.flightCondition && this.props.weather.flightCondition.reasons) || [];
+		const isImperial = this.props.station.unitSystem === 'IMPERIAL';
+		let summary = (this.props.station.flightCondition && this.props.station.flightCondition.summary) || '';
+		let reasons = (this.props.station.flightCondition && this.props.station.flightCondition.reasons) || [];
 		return (
 			<div className='flight-conditions'>
 				<div className='title'>Flight Conditions</div>
