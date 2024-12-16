@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
 import fetchMock from 'fetch-mock';
+import {render} from "@testing-library/react";
 
 const defaultWeatherContent = {
     weather: {
@@ -30,8 +30,5 @@ const defaultWeatherContent = {
 
 it('renders without crashing', () => {
     fetchMock.get('begin:http://mark.soderquist.net/weather/api/station?id=', defaultWeatherContent);
-
-    const div = document.createElement('div');
-    ReactDOM.render(<App/>, div);
-    ReactDOM.unmountComponentAtNode(div);
+    render(<App/>);
 });
