@@ -9,7 +9,7 @@ export default class TemperatureGauge extends Component {
 		const unitMetric = this.props.station.temperatureUnit;
 		return (
 			<div>
-				<div className="temperature">{temperatureMetric}<span className="unit">{unitMetric}</span></div>
+				<div className="temperature header">{temperatureMetric}<span className="unit">{unitMetric}</span></div>
 			</div>
 		)
 	}

@@ -20,37 +20,37 @@ export default class Stats extends Component {
 					<tbody>
 					<tr>
 						<td className="label">wind&nbsp;</td>
-						<td className="value">&nbsp;{windSpeed}</td>
+						<td className="value wind">&nbsp;{windSpeed}</td>
 						<td className="unit">&nbsp;{this.props.station.windSpeedUnit}</td>
 					</tr>
 					<tr>
 						<td className="label">gust&nbsp;</td>
-						<td className="value">&nbsp;{gustSpeed}</td>
+						<td className="value wind">&nbsp;{gustSpeed}</td>
 						<td className="unit">&nbsp;{this.props.station.windSpeedUnit}</td>
 					</tr>
 					<tr>
 						<td className="label">from&nbsp;</td>
-						<td className="value">&nbsp;{windCardinal}</td>
+						<td className="value wind">&nbsp;{windCardinal}</td>
 						<td className="unit">&nbsp;{windDirection}{this.props.station.windDirectionUnit}</td>
 					</tr>
 					<tr>
 						<td className="label">humid&nbsp;</td>
-						<td className="value">&nbsp;{humidity}</td>
+						<td className="value humidity">&nbsp;{humidity}</td>
 						<td className="unit">&nbsp;{this.props.station.humidityUnit}</td>
 					</tr>
-					<tr className="stats">
+					<tr >
 						<td className="label">dew</td>
-						<td className="value">{dewPoint}</td>
+						<td className="value temperature">{dewPoint}</td>
 						<td className="unit">{tempUnit}</td>
 					</tr>
-					<tr className="stats">
+					<tr>
 						<td className="label">feel</td>
-						<td className="value">{feelslike}</td>
+						<td className="value temperature">{feelslike}</td>
 						<td className="unit">{tempUnit}</td>
 					</tr>
 					<tr>
 						<td className="label">rain&nbsp;</td>
-						<td className="value">&nbsp;{rainTotalDaily}</td>
+						<td className="value rain">&nbsp;{rainTotalDaily}</td>
 						<td className="unit">&nbsp;{this.props.station.rainUnit}</td>
 					</tr>
 					</tbody>

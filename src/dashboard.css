@@ -19,6 +19,10 @@
 }
 
 .temperature {
+	color: inherit;
+}
+
+.temperature.header {
 	font-size: 4rem;
 	text-align: center;
 	vertical-align: middle;
@@ -30,6 +34,18 @@
 	vertical-align: super;
 	/* This should stay as 0.5em, and not use the rem unit */
 	font-size: 0.5em;
+}
+
+.wind {
+	color: #c080ff;
+}
+
+.humidity {
+	color: #80c080;
+}
+
+.rain {
+	color: #80ffff;
 }
 
 .stats {
@@ -107,4 +123,3 @@
 .flight-conditions .reason {
 	font-size: 2rem;
 }
-
