@@ -12,7 +12,7 @@
     "@testing-library/jest-dom": "^6",
     "@testing-library/react": "^16",
     "@testing-library/user-event": "^14",
-    "fetch-mock": "^12.2.0",
+    "fetch-mock": "^12.2.1",
     "node-fetch": "^3",
     "postcss": "^8.5",
     "react-scripts": "^5"
