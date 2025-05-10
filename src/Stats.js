@@ -5,8 +5,8 @@ export default class Stats extends Component {
 
 	render() {
 		const isImperial = this.props.station.unitSystem === 'IMPERIAL';
-		const windSpeed = parseFloat(this.props.station.windTenMinAvg).toFixed(1);
-		const gustSpeed = parseFloat(this.props.station.windTwoMinMax).toFixed(1);
+		const windSpeed = parseFloat(isImperial ? this.props.station.windTenMinAvg : this.props.station.windTwoMinAvg).toFixed(1);
+		const gustSpeed = parseFloat(isImperial ? this.props.station.windTenMinMax : this.props.station.windTwoMinMax).toFixed(1);
 		const windCardinal = windSpeed < 0.1 ? "---" : this.props.station.windCardinalTenMinAvg;
 		const windDirection = windSpeed < 0.1 ? "---" : parseFloat(this.props.station.windDirectionTenMinAvg).toFixed(0);
 		const humidity = parseFloat(this.props.station.humidity).toFixed(0);
@@ -38,7 +38,7 @@ export default class Stats extends Component {
 						<td className="value humidity">&nbsp;{humidity}</td>
 						<td className="unit">&nbsp;{this.props.station.humidityUnit}</td>
 					</tr>
-					<tr >
+					<tr>
 						<td className="label">dew</td>
 						<td className="value temperature">{dewPoint}</td>
 						<td className="unit">{tempUnit}</td>
