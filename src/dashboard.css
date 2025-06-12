@@ -74,7 +74,7 @@
 	text-align: left;
 	vertical-align: middle;
 	/* This should stay as 0.5em, and not use the rem unit */
-	font-size: 0.5em;
+	font-size: 1rem;
 }
 
 .clock {
@@ -88,16 +88,16 @@
 
 .clock .ampm {
 	color: #808080;
-	font-size: 0.5em;
+	font-size: 3rem;
 }
 
 .clock .date {
 	color: #808080;
-	font-size: 0.4em;
+	font-size: 2.5rem;
 }
 
 .clock .dow {
-	font-size: 0.5em;
+	font-size: 3rem;
 }
 
 .flight-conditions {
@@ -122,4 +122,9 @@
 
 .flight-conditions .reason {
 	font-size: 2rem;
+}
+
+.flight-conditions .time {
+	color: #808080;
+	font-size: 2.5rem;
 }
