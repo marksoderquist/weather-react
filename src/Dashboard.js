@@ -65,7 +65,7 @@ class IdleTimerDashboard extends Component {
 					<Clock/>
 					{/*&nbsp;*/}
 					{/*<FlightConditions station={this.state.stationA}/>*/}
-					<p>Due to an upcoming move, Bluewing Station has been discontinued.</p>
+					<p>Due to an upcoming move, Bluewing Station has been discontinued. Thank you for your patronage.</p>
 				</div>
 				<div className="content-right col-4">
 					<div className="buffer"/>
