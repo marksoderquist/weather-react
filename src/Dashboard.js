@@ -52,23 +52,24 @@ class IdleTimerDashboard extends Component {
 	render() {
 		return (
 			<div className="dashboard">
-				<div className="mobile-header">
-					<FlightConditions station={this.state.stationA}/>
-					&nbsp;
-				</div>
+				{/*<div className="mobile-header">*/}
+				{/*	<FlightConditions station={this.state.stationA}/>*/}
+				{/*	&nbsp;*/}
+				{/*</div>*/}
 
 				<div className="content-left col-4">
 					<div className="buffer"/>
-					<WeatherStation station={this.state.stationA}/>
+				{/*	<WeatherStation station={this.state.stationA}/>*/}
 				</div>
 				<div className="content-center col-4">
 					<Clock/>
-					&nbsp;
-					<FlightConditions station={this.state.stationA}/>
+					{/*&nbsp;*/}
+					{/*<FlightConditions station={this.state.stationA}/>*/}
+					<p>Due to an upcoming move, Bluewing Station has been discontinued.</p>
 				</div>
 				<div className="content-right col-4">
 					<div className="buffer"/>
-					<WeatherStation station={this.state.stationB}/>
+					{/*<WeatherStation station={this.state.stationB}/>*/}
 				</div>
 			</div>
 		)
